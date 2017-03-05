@@ -1,0 +1,11 @@
+{
+  "name": "NodeProxy",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node bin/www"
+  },
+  "dependencies": {
+    "http-proxy": "^1.16.2"
+  }
+}
