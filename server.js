@@ -13,7 +13,12 @@ var options = {
 
 
 http.createServer(function(req, res) {
+	if(options[req.headers.host]=== undefined){
+		target='http://127.0.0.1:3001';
+	}else{
+		target=options[req.headers.host];
+	}
   proxy.web(req, res, {
-    target: options[req.headers.host]
+    target: target
   });
 }).listen(80);
